@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POKEMON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style/style.css" />
+    <link rel="icon" href="./images/favicon.png" type="image/gif" sizes="32x32">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <style>
+        body{
+            background-image: url("./images/backgroundIndex.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body id="body" onload="init()">
+    <div id="wrapper">
+        <div>
+            <h1>Choose your Moveset</h1>
+            <img class="image" id="wasd" src="./images/wasd.png" alt="Hier sollte ein Bild sein!">
+            <img class="image" id="arrows" src="./images/arrows.png" alt="Hier sollte ein Bild sein!">
+        </div>
+        <div id="pokemon">
+            <h1>Choose your Starter</h1>
+            <i id="leftButton" class="fas fa-arrow-circle-left"></i>
+            <img id="pokeImage" src="./images/pokemon4.png" alt="Hier sollte ein Bild sein!">
+            <i id="rightButton" class="fas fa-arrow-circle-right"></i>
+        </div>
+        <div id="colors">
+            <h1>Choose your Background Color</h1>
+            <div class="color" id="darkred"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="orange"></div>
+            <div class="color" id="blue"></div>
+            <div class="color" id="purple"></div>
+            <div class="color" id="lightblue"></div>
+            <div class="color" id="green"></div>
+            <div class="color" id="lawngreen"></div>
+            <div class="color" id="yellow"></div>
+        </div>
+        <div>
+            <button id="button" type="button">PLAY</button>
+            <p id="error" style="display: none">Select one option</p>
+        </div>
+    </div>
+    <div id="newbody" style="display: none">
+            <img id="logo" src="./images/pokemon.png" alt="Hier sollte ein Bild sein!">
+            <div id="box">
+                <div>
+                    <img id="sprite" style="position: absolute; top: 0vh; left: 0vw;" src="./images/favicon.png"  alt="Hier sollte ein Bild sein!">
+                </div>
+                <div>
+                    <img id="pokeball" style="position: absolute; top: -20vh; left: -20vw;" src="./images/pokeball_normal1.png" alt="Hier sollte ein Bild sein!">
+                </div>
+            </div>
+            <div id="balls">
+                <div id="normalBall">
+                    <img class="bälle" src="./images/normalerball.png" alt="Hier sollte ein Bild sein!">
+                    <p id="countPokeballs">x 0/ 10</p>
+                </div>
+                <div id="superBall">
+                    <img class="bälle" src="./images/superball.png" alt="Hier sollte ein Bild sein!">
+                    <p id="countSuperballs">x 0/ 5</p>
+                </div>
+                <div id="hyperBall">
+                    <img class="bälle" src="./images/hyperball.png" alt="Hier sollte ein Bild sein!">
+                    <p id="countHyperballs">x 0/ 3</p>
+                </div>
+                <div id="masterBall">
+                    <img class="bälle" src="./images/meisterball.png" alt="Hier sollte ein Bild sein!">
+                    <p id="countMasterballs">x 0/ 1</p>
+                </div>
+            </div>
+        </div>
+        <script src="./script/script.js"></script>
+</body>
+</html>

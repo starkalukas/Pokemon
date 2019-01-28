@@ -1,0 +1,163 @@
+body{
+    padding: 0;
+    user-select: none;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+#box{
+    height: 80vh;
+    width: 80vw;
+    background-image: url('./../images/background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 10vw;
+    top: 10vh;
+    right: 10vw;
+    bottom: 10vh;
+}
+#pokeball{
+   z-index: -0.5; 
+   width: 5vw;
+   height: 5vw;
+}
+#sprite{
+    z-index: 1;
+    width: 5vw;
+    height: 5vw;
+}
+#logo{
+    width: auto;
+    height: 7.5vh;
+    position: relative;
+    left: 40%;
+}
+#normalBall, #superBall, #hyperBall, #masterBall{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 1%;
+    height: auto;
+    width: 10%;
+    text-align: center;
+}
+#normalBall{
+    left: 35vw;
+}
+#superBall{
+    left: 45vw;
+}
+#hyperBall{
+    left: 55vw;
+}
+#masterBall{
+    left: 65vw;
+}
+.bälle{
+    height: 5vh;
+    width: 5vh;
+}
+#wrapper {
+    width: 80%;
+    min-height: 100%;
+    margin: 0px auto;
+    padding: 20px;
+    text-align: center;
+}
+#wasd, #arrows{
+    border: rgba(0, 0, 0, 0.0) 5px solid;
+}
+p{
+    display: inline-block;
+    font-size: 3vh;
+}
+#pokemon{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.image{
+    height: 20%;
+    width: 20%;
+}
+#pokeImage{
+    display: inline-block;
+    height: auto;
+    width: 12vw;
+}
+#button {
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    position: absolute;
+    bottom: 1%;
+  }
+  
+  #button:hover {
+    background-color: #555555;
+    color: white;
+  }
+  i{
+      font-size: 2.5vh;
+      display: inline-block;
+  }
+  i:hover{
+      cursor: pointer;
+  }
+  .color{
+      border: 5px solid rgba(0, 0, 0, 0.0);
+      border-radius: 100%;
+      height: 1vw;
+      width: 1vw;
+      display: inline-block;
+  }
+  #darkred{
+    background-color: darkred;
+  }
+  #red{
+    background-color: red;
+  }
+  #orange{
+    background-color: orange;
+  }
+  #blue{
+    background-color: blue;
+  }
+  #purple{
+    background-color: purple;
+  }
+  #lightblue{
+    background-color: lightblue;
+  }
+  #green{
+    background-color: green;
+  }
+  #lawngreen{
+    background-color: lawngreen;
+  }
+  #yellow{
+    background-color: yellow;
+  }
+  #colors{
+      position: absolute;
+      left: 40%;
+      bottom: 17%;
+  }
+  h1{
+    color: yellow;
+    text-shadow: -3px 0 darkblue, 0 3px darkblue, 3px 0 darkblue, 0 -3px darkblue;
+  }
