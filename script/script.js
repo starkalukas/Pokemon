@@ -9,12 +9,12 @@ let pokeballs;
 
 let frame = 0;
 let frame2 = 1;
-let frame3 = 4;
+let frame3 = 3;
 
-let countNormal = 0;
-let countSuper = 0;
-let countHyper = 0;
-let countMaster = 0;
+let countNormal = 49;
+let countSuper = 25;
+let countHyper = 15;
+let countMaster = 5;
 let actualCount;
 
 let canMove = true;
@@ -123,9 +123,9 @@ function getPokemon(){
             pokemon3 = 'blastoise';
             break;
         case 3:
-            pokemon = 'bulbasaur';
-            pokemon2 = 'ivysaur';
-            pokemon3 = 'venusaur';
+            pokemon = 'dratini';
+            pokemon2 = 'dragonair';
+            pokemon3 = 'dragonite';
             break;
         case 4:
             pokemon = 'cyndaquil';
@@ -274,15 +274,45 @@ function movesprite(leftMovement, topMovement){
         document.getElementById('countSuperballs').innerHTML = 'x ' + countSuper + '/ 25';
         document.getElementById('countHyperballs').innerHTML = 'x ' + countHyper + '/ 15';
         document.getElementById('countMasterballs').innerHTML = 'x ' + countMaster + '/ 5';
+        checkReady2();
     }
     if(!evolution1Done){
         document.getElementById('countPokeballs').innerHTML = 'x ' + countNormal + '/ 10';
         document.getElementById('countSuperballs').innerHTML = 'x ' + countSuper + '/ 5';
         document.getElementById('countHyperballs').innerHTML = 'x ' + countHyper + '/ 3';
         document.getElementById('countMasterballs').innerHTML = 'x ' + countMaster + '/ 1';
+        checkReady();
     }
     
     
+}
+function checkReady(){
+    if(countNormal >= 10){
+        document.getElementById('countPokeballs').style.color = 'yellow';
+    }
+    if(countSuper >= 5){
+        document.getElementById('countSuperballs').style.color = 'yellow';
+    }
+    if(countHyper >= 3){
+        document.getElementById('countHyperballs').style.color = 'yellow';
+    }
+    if(countMaster >= 1){
+        document.getElementById('countMasterballs').style.color = 'yellow';
+    }
+}
+function checkReady2(){
+    if(countNormal >= 50){
+        document.getElementById('countPokeballs').style.color = 'yellow';
+    }
+    if(countSuper >= 25){
+        document.getElementById('countSuperballs').style.color = 'yellow';
+    }
+    if(countHyper >= 15){
+        document.getElementById('countHyperballs').style.color = 'yellow';
+    }
+    if(countMaster >= 5){
+        document.getElementById('countMasterballs').style.color = 'yellow';
+    }
 }
 function animateSprite(directionArray){
     frame++;
@@ -337,12 +367,20 @@ function evolution1(){
     canMove = false;
     interval = setInterval('animateEvolution()', 100);
     setTimeout(changeToSecond, 1900);
+    document.getElementById('countPokeballs').style.color = 'black';
+    document.getElementById('countSuperballs').style.color = 'black';
+    document.getElementById('countHyperballs').style.color = 'black';
+    document.getElementById('countMasterballs').style.color = 'black';
     evolution1Done = true;
 }
 function evolution2(){
     canMove = false;
     interval = setInterval('animateEvolution()', 100);
     setTimeout(changeToThird, 1900);
+    document.getElementById('countPokeballs').style.color = 'black';
+    document.getElementById('countSuperballs').style.color = 'black';
+    document.getElementById('countHyperballs').style.color = 'black';
+    document.getElementById('countMasterballs').style.color = 'black';
     evolution2Done = true;
 }
 
@@ -362,6 +400,7 @@ function changeToSecond(){
     moveUp = ['./images/' + pokemon2 + '_up1.png','./images/' + pokemon2 + '_up2.png', './images/' + pokemon2 + '_up3.png'];
     moveLeft = ['./images/' + pokemon2 + '_left1.png','./images/' + pokemon2 + '_left2.png', './images/' + pokemon2 + '_left3.png'];
     moveRight = ['./images/' + pokemon2 + '_right1.png','./images/' + pokemon2 + '_right2.png', './images/' + pokemon2 + '_right3.png'];
+
 
     canMove = true;
 }
@@ -451,7 +490,7 @@ function rightSlide(){
     frame3++;
 
     if(frame3 >= 9){
-        frame3 = 4;
+        frame3 = 3;
     }
 
     document.getElementById('pokeImage').src = './images/pokemon' + frame3 + '.png';
@@ -459,7 +498,7 @@ function rightSlide(){
 function leftSlide(){
     frame3--;
 
-    if(frame3 <= 3){
+    if(frame3 <= 2){
         frame3 = 8;
     }
     
