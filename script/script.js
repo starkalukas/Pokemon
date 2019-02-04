@@ -11,10 +11,10 @@ let frame = 0;
 let frame2 = 1;
 let frame3 = 3;
 
-let countNormal = 49;
-let countSuper = 25;
-let countHyper = 15;
-let countMaster = 5;
+let countNormal = 0;
+let countSuper = 0;
+let countHyper = 0;
+let countMaster = 0;
 let actualCount;
 
 let canMove = true;
